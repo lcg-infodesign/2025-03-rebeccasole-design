@@ -1,8 +1,65 @@
-html, body {
+body {
   margin: 0;
-  padding: 0;
+  background: #0f0f0f;
+  color: white;
+  font-family: Helvetica, sans-serif;
 }
 
-canvas {
-  display: block;
+/* titolo centrale sopra il canvas */
+#title {
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0;
 }
+
+/* canvas */
+#canvas-holder canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+/* legenda */
+#legend {
+  background: rgba(30,30,30,0.9);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  justify-content: space-between;
+  margin: 20px auto; /* centra rispetto al canvas */
+}
+
+.legend-section {
+  margin: 5px 20px;
+}
+
+.legend-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.color-box {
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  border: 1px solid #fff;
+}
+
+.circle-example {
+  display: inline-block;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+.small { width: 5px; height: 5px; }
+.medium { width: 8px; height: 8px; }
+.large { width: 12px; height: 12px; }

@@ -1,18 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Food Waste</title>
 
-    <title>Sketch</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- p5.js -->
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+</head>
 
-    <script src="libraries/p5.min.js"></script>
-    <script src="libraries/p5.sound.min.js"></script>
-  </head>
+<body>
+  <!-- titolo -->
+  <div id="title">Global Food Waste: Most Wasted Foods per Country</div>
 
-  <body>
-    <script src="sketch.js"></script>
-  </body>
+  <!-- contenitore canvas -->
+  <div id="canvas-holder"></div>
+
+  <!-- legenda -->
+  <div id="legend">
+    <div class="legend-section">
+      <div class="legend-title">Categories</div>
+      <div class="legend-item"><div class="color-box" style="background: yellow;"></div>Cereals</div>
+      <div class="legend-item"><div class="color-box" style="background: purple;"></div>Fruits</div>
+      <div class="legend-item"><div class="color-box" style="background: green;"></div>Vegetables</div>
+      <div class="legend-item"><div class="color-box" style="background: red;"></div>Meat</div>
+      <div class="legend-item"><div class="color-box" style="background: lightblue;"></div>Dairy</div>
+      <div class="legend-item"><div class="color-box" style="background: blue;"></div>Fish</div>
+      <div class="legend-item"><div class="color-box" style="background: brown;"></div>Roots</div>
+      <div class="legend-item"><div class="color-box" style="background: grey;"></div>Others</div>
+    </div>
+
+    <div class="legend-section">
+      <div class="legend-title">Point size</div>
+      <div class="legend-item"><span class="circle-example small"></span>Low (~0-15%)</div>
+      <div class="legend-item"><span class="circle-example medium"></span>Medium (~15-30%)</div>
+      <div class="legend-item"><span class="circle-example large"></span>High (~30-50%)</div>
+    </div>
+
+    <div class="legend-section">
+      <div class="legend-title">Radial distance</div>
+      <div>Higher loss → further from center</div>
+    </div>
+  </div>
+
+  <!-- p5.js sketch -->
+  <script src="sketch.js"></script>
+</body>
 </html>
+
