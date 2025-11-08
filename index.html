@@ -14,7 +14,7 @@
 
 <body>
   <!-- titolo -->
-  <div id="title">Global Food Waste: Most Wasted Foods per Country</div>
+  <div id="title">🍽️ Global Food Waste 🍽️<br><span class="subtitle">Most Wasted Foods per Country</span></div>
 
   <!-- contenitore canvas -->
   <div id="canvas-holder"></div>
@@ -23,31 +23,44 @@
   <div id="legend">
     <div class="legend-section">
       <div class="legend-title">Categories</div>
-      <div class="legend-item"><div class="color-box" style="background: yellow;"></div>Cereals</div>
-      <div class="legend-item"><div class="color-box" style="background: purple;"></div>Fruits</div>
-      <div class="legend-item"><div class="color-box" style="background: green;"></div>Vegetables</div>
-      <div class="legend-item"><div class="color-box" style="background: red;"></div>Meat</div>
-      <div class="legend-item"><div class="color-box" style="background: lightblue;"></div>Dairy</div>
-      <div class="legend-item"><div class="color-box" style="background: blue;"></div>Fish</div>
-      <div class="legend-item"><div class="color-box" style="background: brown;"></div>Roots</div>
-      <div class="legend-item"><div class="color-box" style="background: grey;"></div>Others</div>
+      <div class="legend-item"><div class="color-box cereals"></div>Cereals</div>
+      <div class="legend-item"><div class="color-box fruits"></div>Fruits</div>
+      <div class="legend-item"><div class="color-box vegetables"></div>Vegetables</div>
+      <div class="legend-item"><div class="color-box meat"></div>Meat</div>
+      <div class="legend-item"><div class="color-box dairy"></div>Dairy</div>
+      <div class="legend-item"><div class="color-box fish"></div>Fish</div>
+      <div class="legend-item"><div class="color-box roots"></div>Roots</div>
+      <div class="legend-item"><div class="color-box others"></div>Others</div>
     </div>
 
     <div class="legend-section">
       <div class="legend-title">Point size</div>
-      <div class="legend-item"><span class="circle-example small"></span>Low (~0-15%)</div>
-      <div class="legend-item"><span class="circle-example medium"></span>Medium (~15-30%)</div>
-      <div class="legend-item"><span class="circle-example large"></span>High (~30-50%)</div>
+      <div class="legend-item"><span class="circle-example small"></span>Low (~10–15%)</div>
+      <div class="legend-item"><span class="circle-example medium"></span>Medium (~15–30%)</div>
+      <div class="legend-item"><span class="circle-example large"></span>High (~30–50%)</div>
+    </div>
     </div>
 
-    <div class="legend-section">
+    <!--<div class="legend-section">
       <div class="legend-title">Radial distance</div>
       <div>Higher loss → further from center</div>
     </div>
-  </div>
+  </div> -->
 
   <!-- p5.js sketch -->
   <script src="sketch.js"></script>
 </body>
-</html>
 
+ <footer>
+      <div class="footer-container">
+        <img src="assets/polimi-logo.png" alt="Politecnico di Milano Logo" class="poli-logo">
+        <div class="footer-text">
+          <p><strong>Rebecca Sole</strong> </p>
+          <p>Corso di Design della Comunicazione</p>
+          <p>Laboratorio di Computer Grafica per l'Information Design A.A. 2025/2026</p>
+          <p>Politecnico di Milano</p>
+        </div>
+      </div>
+    </footer>
+    
+</html>

@@ -1,15 +1,40 @@
 body {
   margin: 0;
-  background: #0f0f0f;
-  color: white;
-  font-family: Helvetica, sans-serif;
+  background: radial-gradient(circle at center, #202020 0%, #0f0f0f 80%);
+  color: #f8f8f8;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/* titolo centrale sopra il canvas */
+/* insegna del ristorante */
 #title {
   text-align: center;
-  font-size: 24px;
-  margin: 20px 0;
+  font-size: 40px;
+  margin: 30px 0 10px;
+  color: #fffbe6;
+  text-shadow: 
+    0 0 10px #ffda6a,
+    0 0 20px #ffcc33,
+    0 0 30px #ffaa00,
+    0 0 40px #ff8800;
+  letter-spacing: 2px;
+  font-weight: bold;
+  animation: neon-flicker 2s infinite alternate;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #fff5cc;
+  text-shadow: 0 0 5px #ffaa00;
+  font-weight: 300;
+}
+
+@keyframes neon-flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.6;
+  }
 }
 
 /* canvas */
@@ -20,39 +45,58 @@ body {
 
 /* legenda */
 #legend {
-  background: rgba(30,30,30,0.9);
-  border: 1px solid rgba(255,255,255,0.6);
-  border-radius: 10px;
-  padding: 15px;
+  background: rgba(30, 30, 30, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 15px;
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 900px;
   justify-content: space-between;
-  margin: 20px auto; /* centra rispetto al canvas */
+  margin: 30px auto;
+  box-shadow: 0 0 20px rgba(255, 200, 100, 0.15);
 }
 
 .legend-section {
-  margin: 5px 20px;
+  margin: 10px 25px;
+  min-width: 200px;
 }
 
 .legend-title {
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  color: #ffd966;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .legend-item {
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+  color: #eee;
+  font-size: 14px;
 }
 
 .color-box {
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   margin-right: 8px;
   border: 1px solid #fff;
+  border-radius: 3px;
 }
 
+/* colori coerenti con lo sketch.js */
+.color-box.cereals { background: #FFD966; }
+.color-box.fruits { background: #FFB6C1; }
+.color-box.vegetables { background: #9FE2BF; }
+.color-box.meat { background: #FF6B6B; }
+.color-box.dairy { background: #B5E3FF; }
+.color-box.fish { background: #A1C4FD; }
+.color-box.roots { background: #E7C6A0; }
+.color-box.others { background: #CCCCCC; }
+
+/* esempi punti */
 .circle-example {
   display: inline-block;
   margin-right: 8px;
@@ -60,6 +104,59 @@ body {
   background: #ccc;
 }
 
-.small { width: 5px; height: 5px; }
-.medium { width: 8px; height: 8px; }
-.large { width: 12px; height: 12px; }
+.small { width: 6px; height: 6px; }
+.medium { width: 10px; height: 10px; }
+.large { width: 14px; height: 14px; }
+
+/* footer */
+footer {
+  background-color: #FFF5B1; /* giallo chiaro tipo stelle */
+  color: #1b1b1b;
+  text-align: center;
+  padding: 20px 20px;
+  border-top: 1px solid #FFD220; /* bordo più scuro giallo */
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.poli-logo {
+  width: 80px; 
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.poli-logo:hover {
+  opacity: 1;
+}
+
+.footer-text p {
+  margin: 4px 0;
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: 0.8;
+}
+
+.footer-text strong {
+  font-weight: 600;
+  color: #0F143C;
+}
+
+#canvas-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+
+canvas {
+  border: 6px double #fffbe6;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 200, 100, 0.15);
+  background-color: #FFF8E7;
+}
